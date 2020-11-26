@@ -1,0 +1,28 @@
+# config.yaml
+
+## Where the samples will be written
+save_data: ./out_data
+## Where the vocab(s) will be written
+src_vocab: ./out.vocab.src
+tgt_vocab: ./out.vocab.tgt
+overwrite: True
+
+# Corpus opts:
+data:
+    corpus_1:
+        path_src: ./c1_src.txt
+        path_tgt: ./c1_tgt.txt
+    valid:
+        path_src: ./v_src.txt
+        path_tgt: ./v_tgt.txt
+
+
+# Train on a single GPU
+world_size: 1
+gpu_ranks: [0]
+
+# Where to save the checkpoints
+save_model: ./model_saved
+save_checkpoint_steps: 500
+train_steps: 500000
+valid_steps: 500
